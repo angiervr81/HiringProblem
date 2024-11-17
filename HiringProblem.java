@@ -39,13 +39,13 @@ class HiringProblem{
                         int hiringCost = candidates[i] - currentHireSkill;
                         totalCost += hiringCost; // adad the hiring cost to the total 
                         currentHireSkill = candidates[i];  //update current hired skill level 
-                        hiredCandidates.append("Candidate "). append(i+1).append(" ");  // keep track of hired candidates
+                        hiredCandidates.append(", ").append("Candidate "). append(i+1);  // keep track of hired candidates
                         
                     }
                 }
             }
                 // printing out the results 
-                System.out.print(" A = [");
+                System.out.print("Among the cancidates A = [");
                 for (int i=0; i<candidates.length;i++){
                     System.out.print(candidates[i]);
 
@@ -54,7 +54,7 @@ class HiringProblem{
                     }
                 }
 
-                System.out.println("] " + hiredCandidates + " are hired and the total cost of this hiring process is $" + totalCost);
+                System.out.println("], " + hiredCandidates + " are hired and the total cost of this hiring process is $" + totalCost);
 
 
         }
