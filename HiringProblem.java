@@ -44,8 +44,17 @@ class HiringProblem{
                     }
                 }
             }
+                // printing out the results 
+                System.out.print(" A = [");
+                for (int i=0; i<candidates.length;i++){
+                    System.out.print(candidates[i]);
 
+                    if (i < candidates.length -1){
+                        System.out.print(" , ");
+                    }
+                }
 
+                System.out.println("] " + hiredCandidates + " are hired and the total cost of this hiring process is $" + totalCost);
 
 
         }
