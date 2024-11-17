@@ -29,14 +29,17 @@ class HiringProblem{
                 //If statemnet that will hire the 1st candiate 
                 if(i==0){
                     currentHireSkill = candidates[i];
-                    totalCost += currentHireSkill;   // hiring cost 
-                    hiredCandidates.append("Candidate ").append(i+1).append(" ");
+                    totalCost += currentHireSkill;   // hiring cost will equal to skill level
+                    hiredCandidates.append("Candidate ").append(i+1).append(" "); //keep track of hired candidates 
                 }else{
+
+                    // If statement to check if next cancidate is better than current 
                     if (candidates[i] > currentHireSkill) {
+                        // calculate hiring cost 
                         int hiringCost = candidates[i] - currentHireSkill;
-                        totalCost += hiringCost;
-                        currentHireSkill = candidates[i];
-                        hiredCandidates.append("Candidate "). append(i+1).append(" ");
+                        totalCost += hiringCost; // adad the hiring cost to the total 
+                        currentHireSkill = candidates[i];  //update current hired skill level 
+                        hiredCandidates.append("Candidate "). append(i+1).append(" ");  // keep track of hired candidates
                         
                     }
                 }
